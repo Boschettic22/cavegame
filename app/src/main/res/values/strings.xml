@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">cavegame</string>
+
+    <string name="title1">Viewer Beware…\nYou\'re in for the \t\t\tGaming Scare...</string>
+
+    <string name="title2">enter at own gaming risk</string>
+    <string name="button1">titlebutton</string>
+</resources>
