@@ -10,4 +10,20 @@
         android:name="com.ankit.cavegame.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/caveActivity"
+        android:name="com.ankit.cavegame.CaveActivity"
+        android:label="CaveActivity"
+        tools:layout="@layout/cave_activity"
+        />
+    <fragment
+        android:id="@+id/wizActivity"
+
+        android:name="com.ankit.cavegame.CaveActivity"
+        android:label="wizActivity"
+
+
+
+    />
+
 </navigation>

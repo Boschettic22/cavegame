@@ -14,12 +14,12 @@ import androidx.appcompat.app.AppCompatActivity
 //not very fun but 'gameplay' comes later :p
 
 
-class CaveActivity : AppCompatActivity() {
+class WizActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.cave_activity)
+        setContentView(R.layout.wiz_activity)
         val button = findViewById<Button>(R.id.button1)
 
 

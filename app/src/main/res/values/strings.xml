@@ -5,4 +5,14 @@
 
     <string name="title2">enter at own gaming risk</string>
     <string name="button1">titlebutton</string>
+    <string name="dungeongreets">You are in a dungeon, the rich smell of mildew emanates from the Dungeon walls, what will you do? \n\n\t[Please Press The Text to Proceed]</string>
+
+
+
+<!--    I am the cave activity -->
+    <string name="caveButton1">Grab Torch</string>
+    <string name="caveButton2">Observe Cave Walls</string>
+    <string name="caveButton3">Listen for Goblin(s)</string>
+    <string name="caveButton4">Whisper Incantation to Self</string>
+
 </resources>
