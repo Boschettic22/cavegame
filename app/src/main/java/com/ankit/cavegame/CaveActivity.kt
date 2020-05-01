@@ -3,6 +3,7 @@ package com.ankit.cavegame
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -20,14 +21,21 @@ class CaveActivity() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cave_activity)
-        val button = findViewById<Button>(R.id.button1)
+
+        val textView = findViewById<TextView>(R.id.text_view_torch)
+        val button1 = findViewById<Button>(R.id.button1);
+        val button2 = findViewById<Button>(R.id.button2);
+        val button3 = findViewById<Button>(R.id.button3);
+        val button4 = findViewById<Button>(R.id.button4);
+
+        // Counter to count button click
+        var torchCounter: Int = 0;
 
 
-
-        button.setOnClickListener {
-
+        button1.setOnClickListener(){
+            torchCounter++
+            textView.text = "Torch Counter : $torchCounter"
         }
-
 //    fun grabaTorch(view : View){
 //        //do something when torch is grabbed
 //        var torch: Int = 0

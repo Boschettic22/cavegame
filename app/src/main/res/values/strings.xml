@@ -10,9 +10,11 @@
 
 
 <!--    I am the cave activity -->
+    <string name="torchText">Torches Get: </string>
     <string name="caveButton1">Grab Torch</string>
     <string name="caveButton2">Observe Cave Walls</string>
     <string name="caveButton3">Listen for Groblin(s)</string>
     <string name="caveButton4">Whisper Incantation to Self</string>
+    <string name="counter">$counter</string>
 
 </resources>

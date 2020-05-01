@@ -1,10 +1,9 @@
 package com.ankit.cavegame
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val button = findViewById<Button>(R.id.buttontogo)
+
+
+
+
+
+        val button = findViewById<ImageButton>(R.id.portalStart)
         //makes the portal a button to go to the cave
         button.setOnClickListener {
             val intent = Intent(this, CaveActivity::class.java)
