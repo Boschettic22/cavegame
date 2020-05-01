@@ -14,7 +14,7 @@
     <string name="caveButton1">Grab Torch</string>
     <string name="caveButton2">Observe Cave Walls</string>
     <string name="caveButton3">Listen for Groblin(s)</string>
-    <string name="caveButton4">Whisper Incantation to Self</string>
+    <string name="caveButton4">Proceed Towards the Light</string>
     <string name="counter">$counter</string>
 
 </resources>

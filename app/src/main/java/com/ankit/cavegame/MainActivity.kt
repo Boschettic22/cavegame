@@ -28,10 +28,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
-
-
             }
 
 

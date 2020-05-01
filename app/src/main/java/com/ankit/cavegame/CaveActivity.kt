@@ -1,8 +1,10 @@
 package com.ankit.cavegame
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -16,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class CaveActivity() : AppCompatActivity() {
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +42,15 @@ class CaveActivity() : AppCompatActivity() {
 //    fun grabaTorch(view : View){
 //        //do something when torch is grabbed
 //        var torch: Int = 0
-//
+
+
+//        to go to wiz, bottom right button
+        val button = findViewById<Button>(R.id.button4)
+        //makes the portal a button to go to the cave
+        button.setOnClickListener {
+            val intent = Intent(this, WizActivity::class.java)
+
+            startActivity(intent)
 
 
     }
@@ -49,6 +60,12 @@ class CaveActivity() : AppCompatActivity() {
             return Counter(grabaTorch + increment)
         }
     }
+
+
+
+
+
+
 
 
 }
