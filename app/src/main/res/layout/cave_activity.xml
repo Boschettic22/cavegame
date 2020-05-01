@@ -31,7 +31,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/dankcave" />
+                app:srcCompat="@drawable/dankcave"
+                android:contentDescription="Dank Cave" />
 
             <TextView
                 android:id="@+id/dungeontext"
@@ -54,7 +55,9 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="452dp"
                 android:text="@string/caveButton1"
+                android:onClick="grabaTorch"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button

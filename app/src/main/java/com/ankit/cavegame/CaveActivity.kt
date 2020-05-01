@@ -1,6 +1,6 @@
 package com.ankit.cavegame
 
-import android.R
+
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 //not very fun but 'gameplay' comes later :p
 
 
-class CaveActivity : AppCompatActivity() {
+class CaveActivity() : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,16 +26,24 @@ class CaveActivity : AppCompatActivity() {
 
         button.setOnClickListener {
 
-
         }
 
+//    fun grabaTorch(view : View){
+//        //do something when torch is grabbed
+//        var torch: Int = 0
+//
 
 
+    }
 
-//        button.setOnClickListener {
-//            val intent = Intent(this, CaveActivity::class.java)
+    data class Counter(val grabaTorch: Int) {
+        operator fun plus(increment: Int): Counter {
+            return Counter(grabaTorch + increment)
+        }
+    }
 
-        }}
+
+}
 
 
 

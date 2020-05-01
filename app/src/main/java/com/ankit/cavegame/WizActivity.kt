@@ -1,6 +1,6 @@
 package com.ankit.cavegame
 
-import android.R
+
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -31,9 +31,6 @@ class WizActivity : AppCompatActivity() {
 
 
 
-
-//        button.setOnClickListener {
-//            val intent = Intent(this, CaveActivity::class.java)
 
         }}
 

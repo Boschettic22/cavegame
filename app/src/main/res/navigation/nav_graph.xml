@@ -9,7 +9,12 @@
         android:id="@+id/mainActivity"
         android:name="com.ankit.cavegame.MainActivity"
         android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/mainActivity2"
+            app:destination="@id/caveActivity"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </activity>
     <activity
         android:id="@+id/caveActivity"
         android:name="com.ankit.cavegame.CaveActivity"
