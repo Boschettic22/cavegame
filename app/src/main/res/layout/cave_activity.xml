@@ -5,7 +5,7 @@
 
     <data>
 
-        <variable name="torchHaver" type="android.widget.Button"/>
+        <variable name="grabaTorch" type="android.widget.Button"/>
 
     </data>
 
@@ -22,13 +22,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="409dp"
+                android:id="@+id/caveImg"
+                android:layout_width="410dp"
                 android:layout_height="264dp"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="451dp"
-                android:contentDescription="Dank Cave"
+                android:contentDescription="Cave"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +55,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="452dp"
                 android:onClick="grabaTorch"
-                android:text="@string/caveButton1"
+                android:text="@string/wizButton1"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +66,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="214dp"
                 android:layout_marginTop="452dp"
-                android:text="@string/caveButton2"
+                android:text="@string/wizButton2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,7 +76,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="566dp"
-                android:text="@string/caveButton3"
+                android:text="@string/wizButton3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="214dp"
                 android:layout_marginTop="566dp"
-                android:text="@string/caveButton4"
+                android:text="@string/wizButton3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,7 +97,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="312dp"
                 android:layout_marginBottom="24dp"
-                android:text="x"
+                android:text="@string/counter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.307"

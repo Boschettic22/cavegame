@@ -1,13 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable name="torchMancy" type="android.widget.Button"/>
+
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/wizColor"
+        android:orientation="vertical"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".WizActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wyzzImg"
+                android:layout_width="409dp"
+                android:layout_height="264dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="451dp"
+                android:contentDescription="@string/wizImg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.319"
+                app:srcCompat="@drawable/wyzzerd" />
+
+            <TextView
+                android:id="@+id/wizIntro"
+                android:layout_width="352dp"
+                android:layout_height="137dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="316dp"
+                android:autoSizeMinTextSize="18dp"
+                android:text="@string/wizardSpeaks"
+                android:textIsSelectable="false"
+
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wizButton1"
+                android:layout_width="169dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="476dp"
+                android:onClick="torchMancyCounter"
+                android:text="@string/wizButton1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wizButton2"
+                android:layout_width="169dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="476dp"
+                android:text="@string/wizButton2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wizButton3"
+                android:layout_width="169dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="592dp"
+                android:text="@string/wizButton3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wizButton4"
+                android:layout_width="169dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="592dp"
+                android:text="@string/wizButton4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wizardSpeaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="312dp"
+                android:layout_marginBottom="24dp"
+                android:text="x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.307"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>
+

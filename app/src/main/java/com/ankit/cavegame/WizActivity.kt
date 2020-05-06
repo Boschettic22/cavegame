@@ -1,30 +1,50 @@
 package com.ankit.cavegame
 
-
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.ankit.cavegame.R.layout.wiz_activity
 
-
-//i want this code to put away some text when one of the buttons is pressed, and
-//if the user chooses correctly, gives them a torch,
-//and progress their text or maybe change their screen (add later, wiz part)
-//when torchhaver is selected I'll have a counter go up One and if that's > 1 and another criteria is met
-//you win the game
-//not very fun but 'gameplay' comes later :p
-
+//push wizButton1, get +1 pyromancy, change screen to final boss
+//value must be carried to final boss in order to beat him
 
 class WizActivity : AppCompatActivity() {
 
-
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.wiz_activity)
-        val button = findViewById<Button>(R.id.button1)
+        setContentView(wiz_activity)
 
 
 
-        button.setOnClickListener {
+        val textView = findViewById<TextView>(R.id.wizardSpeaks)
+        val wizButton1 = findViewById<Button>(R.id.wizButton1)
+        var torchMancyCounter: Int = 0;
+
+
+
+        data class Counter(val torchMancyCounter: Int) {
+            operator fun plus(increment: Int): Counter {
+                return Counter(torchMancyCounter + increment)
+            }
+        }
+
+
+        wizButton1.setOnClickListener(){
+                torchMancyCounter++
+
+                textView.text = "Torch Counter : $torchMancyCounter"
+
+                val button = findViewById<Button>(R.id.wizButton1)
+                //makes the portal a button to go to the cave
+                button.setOnClickListener {
+                    val intent = Intent(this, MainActivity::class.java)
+//fix this and add plant activitiy
+                    startActivity(intent)
+                }
 
 
         }
