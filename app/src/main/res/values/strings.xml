@@ -24,11 +24,11 @@
     <string name="wizButton1">Torch Mancy</string>
     <string name="wizButton2">Ignore Old Man [Requires ring of Ignorance]</string>
     <string name="wizButton3">Watermancy</string>
-    <string name="wizButton4">Big Muscle Power</string>
+    <string name="wizButton4">Leave this man at once…</string>
 
     <string name="plantIntro">Before you stands a large green plant beast. The combat begins!</string>
     <string name="plantText">plantText!</string>
-    <string name="winText">Congratulations! You beat the boss, as your reward you have earned the crown. Press this button to marvel in its greatness...</string>
+    <string name="winText">Congratulations! You beat the boss, as your reward you have earned the crown. Press the winning cup to marvel in your greatness…</string>
 
 
 </resources>

@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.wiz_activity.*
 
 
 //push wizButton1, get +1 pyromancy, change screen to final boss
@@ -13,28 +15,32 @@ import androidx.appcompat.app.AppCompatActivity
 
 class WizActivity : AppCompatActivity() {
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.wiz_activity)
 
-        val textView = findViewById<TextView>(R.id.wizButton1)
+        val TextView = findViewById<TextView>(R.id.wizButton1)
         val wizButton1 = findViewById<Button>(R.id.wizActivity)
         var torchMancyCounter: Int = 0;
 
 
 
-        data class Counter(val torchMancyCounter: Int) {
+        val button2 = findViewById<Button>(R.id.wizButton2);
+        val button3 = findViewById<Button>(R.id.wizButton3);
+
+
+        data class Counter(val torchMancy: Int) {
             operator fun plus(increment: Int): Counter {
-                return Counter(torchMancyCounter + increment)
+                return Counter(torchMancy + increment)
             }
         }
 
-
+        var torchMancy = 0;
         wizButton1.setOnClickListener(){
-                torchMancyCounter++
+                torchMancy++
 
-                textView.text = "Torch Counter : $torchMancyCounter"
+                android.widget.TextView.torchMancy = "Torch Counter : $torchMancy"
 
                 val button = findViewById<Button>(R.id.wizButton1)
                 //makes the portal a button to go to the cave
@@ -47,10 +53,21 @@ class WizActivity : AppCompatActivity() {
 
         }
 
+//for fun
+        wizButton3.setOnClickListener {
+            Toast.makeText(this@WizActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
 
+            wizButton4.setOnClickListener {
+                Toast.makeText(this@WizActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
 
+        val button = findViewById<Button>(R.id.wizButton4)
+        //makes the portal a button to go to the cave
+        button.setOnClickListener {
+            val intent = Intent(this, PlantActivity::class.java)
 
-        }}
+            startActivity(intent)
+
+        }}}
 
 
 

@@ -19,10 +19,17 @@ class PlantActivity : AppCompatActivity() {
         setContentView(R.layout.plant_activity)
         // get reference to button
         val winButton = findViewById<Button>(R.id.winButton)
-        // set on-click listener
+        val grabaTorch = findViewById<Button>(R.id.caveButton1)
+        val torchMancy: = findViewById<Button>(R.id.wizButton1)
+        // importing the two variables for the winCheck
+
         winButton.setOnClickListener{
-
-
+        var winCheck = false;
+        //setting this if these are both above 1 than set the win to true
+        fun winCheck(grabaTorch && torchMancy > 0){
+            val winCheck = true;
+            setContentView(R.layout.winner_activity
+        }
         }
 
 //         if(grabaTorch && torchMancy > 0)}

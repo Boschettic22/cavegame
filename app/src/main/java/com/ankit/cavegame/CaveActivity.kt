@@ -15,18 +15,20 @@ import androidx.appcompat.app.AppCompatActivity
 //not very fun but 'gameplay' comes later :p
 
 class CaveActivity : AppCompatActivity() {
+    var grabaTorch: Int = 0
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-        var grabaTorch: Int = 0
+
         //declaring global var and specifying, later itll be counted
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cave_activity)
 
-        val textView = findViewById<TextView>(R.id.text_view_torch)
+        val textView = findViewById<TextView>(R.id.dungeontext)
         val button1: Button = findViewById<Button>(R.id.button1);
         val button2 = findViewById<Button>(R.id.button2);
         val button3 = findViewById<Button>(R.id.button3);
         val button4 = findViewById<Button>(R.id.button4);
+
 
         // Counter to count button click
         var torchCounter: Int = 0;
@@ -74,10 +76,5 @@ class CaveActivity : AppCompatActivity() {
 
 
 
-
 }}
-
-
-
-
 
