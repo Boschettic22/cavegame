@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".CaveActivity" />
         <activity android:name=".WizActivity" />
+        <activity android:name=".PlantActivity" />
+        <activity android:name=".WinnerActivity" />
     </application>
 
 </manifest>

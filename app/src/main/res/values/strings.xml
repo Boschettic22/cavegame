@@ -20,9 +20,15 @@
     <string name="wizardSpeaks">Hello there traveler… Congratulations on making it this far. I can train your in one of four skills.. but choose wisely for I can only teach you one skill, and then I will bid you farewell and take a nap. </string>
     <string name="wizImg">A Wizard Stands before you</string>
     <string name="caveImg">You are in a dark cave…</string>
+
     <string name="wizButton1">Torch Mancy</string>
     <string name="wizButton2">Ignore Old Man [Requires ring of Ignorance]</string>
     <string name="wizButton3">Watermancy</string>
     <string name="wizButton4">Big Muscle Power</string>
+
+    <string name="plantIntro">Before you stands a large green plant beast. The combat begins!</string>
+    <string name="plantText">plantText!</string>
+    <string name="winText">Congratulations! You beat the boss, as your reward you have earned the crown. Press this button to marvel in its greatness...</string>
+
 
 </resources>

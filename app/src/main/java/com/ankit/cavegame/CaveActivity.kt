@@ -15,11 +15,10 @@ import androidx.appcompat.app.AppCompatActivity
 //not very fun but 'gameplay' comes later :p
 
 class CaveActivity : AppCompatActivity() {
-
-
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        var grabaTorch: Int = 0
+        //declaring global var and specifying, later itll be counted
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cave_activity)
 
@@ -32,24 +31,28 @@ class CaveActivity : AppCompatActivity() {
         // Counter to count button click
         var torchCounter: Int = 0;
 
-
-        button1.setOnClickListener(){
-            torchCounter++
-            textView.text = "Torch Counter : $torchCounter"
-
-            val button = findViewById<Button>(R.id.button1)
-            //makes the portal a button to go to the cave
-            button.setOnClickListener {
-                val intent = Intent(this, WizActivity::class.java)
-
-                startActivity(intent)
+//counter Grabatorch
+        data class Counter(val grabaTorch: Int) {
+            operator fun plus(increment: Int): Counter {
+                return Counter(grabaTorch + increment)
             }
         }
 
+//        button1.setOnClickListener(){
+//            torchCounter++
+//            textView.text = "Torch Counter : $torchCounter"
+//
+////            val button = findViewById<Button>(R.id.button1)
+////            //makes the portal a button to go to the cave
+////            button.setOnClickListener {
+////                val intent = Intent(this, WizActivity::class.java)
+////
+////                startActivity(intent)
+////            }
+//        }
 
-//    fun grabaTorch(view : View){
-//        //do something when torch is grabbed
-//        var torch: Int = 0
+
+
 
 
 //        to go to wiz, bottom right button
@@ -63,11 +66,7 @@ class CaveActivity : AppCompatActivity() {
 
     }
 
-    data class Counter(val grabaTorch: Int) {
-        operator fun plus(increment: Int): Counter {
-            return Counter(grabaTorch + increment)
-        }
-    }
+
 
 
 

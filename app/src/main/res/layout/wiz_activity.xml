@@ -6,7 +6,6 @@
     <data>
 
         <variable name="torchMancy" type="android.widget.Button"/>
-
     </data>
 
     <LinearLayout
@@ -25,22 +24,21 @@
                 android:id="@+id/wyzzImg"
                 android:layout_width="409dp"
                 android:layout_height="264dp"
-                android:layout_marginStart="56dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="451dp"
                 android:contentDescription="@string/wizImg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.319"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/wyzzerd" />
 
             <TextView
                 android:id="@+id/wizIntro"
                 android:layout_width="352dp"
                 android:layout_height="137dp"
-                android:layout_marginStart="84dp"
-                android:layout_marginTop="316dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="308dp"
                 android:autoSizeMinTextSize="18dp"
                 android:text="@string/wizardSpeaks"
                 android:textIsSelectable="false"
@@ -50,22 +48,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/wizButton1"
-                android:layout_width="169dp"
-                android:layout_height="97dp"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="476dp"
-                android:onClick="torchMancyCounter"
-                android:text="@string/wizButton1"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
                 android:id="@+id/wizButton2"
                 android:layout_width="169dp"
                 android:layout_height="97dp"
-                android:layout_marginStart="284dp"
+                android:layout_marginStart="224dp"
                 android:layout_marginTop="476dp"
                 android:text="@string/wizButton2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +61,7 @@
                 android:id="@+id/wizButton3"
                 android:layout_width="169dp"
                 android:layout_height="97dp"
-                android:layout_marginStart="68dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="592dp"
                 android:text="@string/wizButton3"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,9 +71,21 @@
                 android:id="@+id/wizButton4"
                 android:layout_width="169dp"
                 android:layout_height="97dp"
-                android:layout_marginStart="284dp"
+                android:layout_marginStart="224dp"
                 android:layout_marginTop="592dp"
                 android:text="@string/wizButton4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/wizButton1"
+                android:layout_width="169dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="476dp"
+
+                android:text="@string/wizButton1"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -98,7 +96,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="312dp"
                 android:layout_marginBottom="24dp"
-                android:text="x"
+                android:text="@string/counter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.307"

@@ -5,8 +5,8 @@
 
     <data>
 
-        <variable name="grabaTorch" type="android.widget.Button"/>
 
+        <variable name="grabaTorch" type="android.widget.Button"/>
     </data>
 
     <LinearLayout
@@ -54,8 +54,8 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="452dp"
-                android:onClick="grabaTorch"
-                android:text="@string/wizButton1"
+
+                android:text="@string/caveButton1"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +66,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="214dp"
                 android:layout_marginTop="452dp"
-                android:text="@string/wizButton2"
+                android:text="@string/caveButton2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,7 +76,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="566dp"
-                android:text="@string/wizButton3"
+                android:text="@string/caveButton3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="97dp"
                 android:layout_marginStart="214dp"
                 android:layout_marginTop="566dp"
-                android:text="@string/wizButton3"
+                android:text="@string/caveButton2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

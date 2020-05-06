@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.ankit.cavegame.R.layout.wiz_activity
+
 
 //push wizButton1, get +1 pyromancy, change screen to final boss
 //value must be carried to final boss in order to beat him
@@ -16,12 +16,10 @@ class WizActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(wiz_activity)
+        setContentView(R.layout.wiz_activity)
 
-
-
-        val textView = findViewById<TextView>(R.id.wizardSpeaks)
-        val wizButton1 = findViewById<Button>(R.id.wizButton1)
+        val textView = findViewById<TextView>(R.id.wizButton1)
+        val wizButton1 = findViewById<Button>(R.id.wizActivity)
         var torchMancyCounter: Int = 0;
 
 
@@ -41,8 +39,8 @@ class WizActivity : AppCompatActivity() {
                 val button = findViewById<Button>(R.id.wizButton1)
                 //makes the portal a button to go to the cave
                 button.setOnClickListener {
-                    val intent = Intent(this, MainActivity::class.java)
-//fix this and add plant activitiy
+                    val intent = Intent(this, PlantActivity::class.java)
+
                     startActivity(intent)
                 }
 
