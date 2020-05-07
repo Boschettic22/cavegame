@@ -14,18 +14,17 @@ import kotlinx.android.synthetic.main.wiz_activity.*
 //value must be carried to final boss in order to beat him
 
 class WizActivity : AppCompatActivity() {
-    var torchMancy = 0;
+    var torchMancy: Int = 0;
     @SuppressLint("SetTextI18n", "WrongViewCast")
 
     override fun onCreate(savedInstanceState: Bundle?) {
-       //ww
+        //ww
         super.onCreate(savedInstanceState)
         setContentView(R.layout.wiz_activity)
 
         val TextView = findViewById<TextView>(R.id.wizButton1)
         val wizButton1 = findViewById<Button>(R.id.wizActivity)
         var torchMancyCounter: Int = 0;
-
 
 
         val button2 = findViewById<Button>(R.id.wizButton2);
@@ -39,37 +38,42 @@ class WizActivity : AppCompatActivity() {
         }
 
         var torchMancy = 0;
-        wizButton1.setOnClickListener(){
-                torchMancy++
+        wizButton1.setOnClickListener() {
+            torchMancy++
 //TODO Fix this variable / code maybe check how caveActivity did it
-                android.widget.TextView.torchMancy = "Torch Counter : $torchMancy"
+//            Code Locked away until it plays nicely.
 
-                val button = findViewById<Button>(R.id.wizButton1)
+//                android.widget.TextView.torchMancy = "Torch Counter : $torchMancy"
+//
+//                val button = findViewById<Button>(R.id.wizButton1)
+//                //makes the portal a button to go to the cave
+//                button.setOnClickListener {
+//                    val intent = Intent(this, PlantActivity::class.java)
+//
+//                    startActivity(intent)
+//                }
+
+        }
+
+//for fun
+        wizButton3.setOnClickListener {
+            Toast.makeText(this@WizActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()
+
+            wizButton4.setOnClickListener {
+                Toast.makeText(this@WizActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()
+
+                val button = findViewById<Button>(R.id.wizButton4)
                 //makes the portal a button to go to the cave
                 button.setOnClickListener {
                     val intent = Intent(this, PlantActivity::class.java)
 
                     startActivity(intent)
                 }
-//TODO Make the button after TorchMancy send you to thenext Intent and test app
 
-        }
 
-//for fun
-        wizButton3.setOnClickListener {
-            Toast.makeText(this@WizActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
-
-            wizButton4.setOnClickListener {
-                Toast.makeText(this@WizActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
-
-        val button = findViewById<Button>(R.id.wizButton4)
-        //makes the portal a button to go to the cave
-        button.setOnClickListener {
-            val intent = Intent(this, PlantActivity::class.java)
-
-            startActivity(intent)
-
-        }}}
+            }
+        }                                               }
+    }
 
 
 

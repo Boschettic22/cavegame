@@ -12,9 +12,9 @@
 <!--    I am the cave activity -->
     <string name="torchText">Torches Get: </string>
     <string name="caveButton1">Grab Torch</string>
-    <string name="caveButton2">Observe Cave Walls</string>
-    <string name="caveButton3">Listen for Groblin(s)</string>
-    <string name="caveButton4">Proceed Towards the Light</string>
+    <string name="caveButton2">Eat Torch \n[Die Instantly]</string>
+    <string name="caveButton3">Listen for Groblin(s) \n[Die Instantly]</string>
+    <string name="caveButton4">Proceed Towards the Light </string>
     <string name="counter">$counter</string>
     <string name="torchGotten">The torch creeks as it is removed from the wall, and a scooby-doo contraption swings you in a circle to the other side of the wall. Before you is stands a man the same height as you, you also have the same birthday. You speak to him and he yawns his truth to you as this: </string>
     <string name="wizardSpeaks">Hello there traveler… Congratulations on making it this far. I can train your in one of four skills.. but choose wisely for I can only teach you one skill, and then I will bid you farewell and take a nap. </string>
@@ -22,8 +22,8 @@
     <string name="caveImg">You are in a dark cave…</string>
 
     <string name="wizButton1">Torch Mancy</string>
-    <string name="wizButton2">Ignore Old Man [Requires ring of Ignorance]</string>
-    <string name="wizButton3">Watermancy</string>
+    <string name="wizButton2">Eat Old Man [Cannibalism Skill: LOCKED - \nDie Instantly]</string>
+    <string name="wizButton3">Watermancy [Forbidden Knowledge, \nDie Instantly]</string>
     <string name="wizButton4">Leave this man at once…</string>
 
     <string name="plantIntro">Before you stands a large green plant beast. The combat begins!</string>

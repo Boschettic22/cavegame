@@ -1,9 +1,12 @@
 package com.ankit.cavegame
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.Int as Int1
 
 //Variables...
 // torchMancy  ,,, grabaTorch      if torchManch && grabaTorch > 0 then move u to winscreen
@@ -14,25 +17,35 @@ class PlantActivity : AppCompatActivity() {
 
 
     @SuppressLint("SetTextI18n")
+    val winButton = findViewById<Button>(R.id.winButton)
+    @SuppressLint("ResourceType")
+    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
+    @SuppressLint("ResourceType")
+    var torchMancy = findViewById<View>(R.layout.cave_activity)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.plant_activity)
         // get reference to button
-        //TODO fix the reference to these buttons and
-        // TODO fix the grabatorch torchamncy Check
-        val winButton = findViewById<Button>(R.id.winButton)
 
-        val grabaTorch: = findViewById<Button>(R.id.caveButton1)
-        val torchMancy: = findViewById<Button>(R.id.wizButton1)
+
+
+        val grabaTorch = findViewById<Int>(R.id.button1)
+        val torchMancy = findViewById<Button>(R.id.wizButton1)
         // importing the two variables for the winCheck
 
         winButton.setOnClickListener{
-        var winCheck = false;
-        //setting this if these are both above 1 than set the win to true
-        fun winCheck(grabaTorch && torchMancy > 0){
-            val winCheck = true;
-            setContentView(R.layout.winner_activity
+            var winCheck = false;
+
+
+        winCheck(grabaTorch && torchMancy > 0){
+            val intent = Intent(this, WizActivity::class.java)
+            //we go to a new activity too
+            startActivity(intent)
+
+            var winCheck = true;
+            setContentView(R.layout.winner_activity)
         }
+
         }
 
         //TODO Make button reset game if u fail
