@@ -14,9 +14,11 @@ import kotlinx.android.synthetic.main.wiz_activity.*
 //value must be carried to final boss in order to beat him
 
 class WizActivity : AppCompatActivity() {
-
+    var torchMancy = 0;
     @SuppressLint("SetTextI18n", "WrongViewCast")
+
     override fun onCreate(savedInstanceState: Bundle?) {
+       //ww
         super.onCreate(savedInstanceState)
         setContentView(R.layout.wiz_activity)
 
@@ -39,7 +41,7 @@ class WizActivity : AppCompatActivity() {
         var torchMancy = 0;
         wizButton1.setOnClickListener(){
                 torchMancy++
-
+//TODO Fix this variable / code maybe check how caveActivity did it
                 android.widget.TextView.torchMancy = "Torch Counter : $torchMancy"
 
                 val button = findViewById<Button>(R.id.wizButton1)
@@ -49,7 +51,7 @@ class WizActivity : AppCompatActivity() {
 
                     startActivity(intent)
                 }
-
+//TODO Make the button after TorchMancy send you to thenext Intent and test app
 
         }
 

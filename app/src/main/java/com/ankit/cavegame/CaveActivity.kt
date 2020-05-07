@@ -29,9 +29,10 @@ class CaveActivity : AppCompatActivity() {
         val button3 = findViewById<Button>(R.id.button3);
         val button4 = findViewById<Button>(R.id.button4);
 
+//TODO Make button 4 take u to next activity so player can fail
 
         // Counter to count button click
-        var torchCounter: Int = 0;
+
 
 //counter Grabatorch
         data class Counter(val grabaTorch: Int) {
