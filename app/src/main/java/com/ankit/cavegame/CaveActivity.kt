@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -25,12 +24,12 @@ class CaveActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cave_activity)
 
-        val textView = findViewById<TextView>(R.id.dungeontext)
+//        val textView = findViewById<TextView>(R.id.dungeontext)
         val button1: Button = findViewById<Button>(R.id.button1);
         val button2 = findViewById<Button>(R.id.button2);
         val button3 = findViewById<Button>(R.id.button3);
-        val button4 = findViewById<Button>(R.id.button4);
-
+//        val button4 = findViewById<Button>(R.id.button4);
+// p sure button 4 is in use @ bottom but i gotta coment out to get stuff to work
 //TODO Make button 4 take u to next activity so player can fail
 
         // Counter to count button click
@@ -51,7 +50,7 @@ class CaveActivity : AppCompatActivity() {
         }
 
 //        to avoid unfun crashes. (As opposed to fun crashes)
-            button1.setOnClickListener {
+            button3.setOnClickListener {
             Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
 
             button2.setOnClickListener {

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.Int as Int1
 
 //Variables...
 // torchMancy  ,,, grabaTorch      if torchManch && grabaTorch > 0 then move u to winscreen
@@ -18,26 +17,40 @@ class PlantActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     val winButton = findViewById<Button>(R.id.winButton)
-    @SuppressLint("ResourceType")
-    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
-    @SuppressLint("ResourceType")
-    var torchMancy = findViewById<View>(R.layout.cave_activity)
+//    @SuppressLint("ResourceType")
+//    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
+//    @SuppressLint("ResourceType")
+//    var torchMancy = findViewById<View>(R.layout.cave_activity)
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        var winCheck: Boolean = false;
         super.onCreate(savedInstanceState)
         setContentView(R.layout.plant_activity)
         // get reference to button
 
+//        var grabaTorch: Int = 0    <-- example
+//    @SuppressLint("ResourceType")
+//    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
+//    @SuppressLint("ResourceType")
+//    var torchMancy = findViewById<View>(R.layout.cave_activity)
 
-
-        val grabaTorch = findViewById<Int>(R.id.button1)
-        val torchMancy = findViewById<Button>(R.id.wizButton1)
+//        comented out @ 10:30
+        @SuppressLint("ResourceType")
+        var grabaTorch =  findViewById<Button>(R.integer.grabaTorch)
+        @SuppressLint("ResourceType")
+        var torchMancy: Int = findViewById<Button>(R.integer.torchMancy)
         // importing the two variables for the winCheck
 
         winButton.setOnClickListener{
-            var winCheck = false;
+            fun main = if(grabaTorch > 0) {
+                ( torchMancy > 0 )
+                    else{
 
+                }
+            }
+            }
 
-        winCheck(grabaTorch && torchMancy > 0){
             val intent = Intent(this, WizActivity::class.java)
             //we go to a new activity too
             startActivity(intent)
@@ -57,7 +70,7 @@ class PlantActivity : AppCompatActivity() {
 //        startActivity(intent)
 
 
-    }}
+    }
 
 
 
