@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.plant_activity.*
 
 //Variables...
 // torchMancy  ,,, grabaTorch      if torchManch && grabaTorch > 0 then move u to winscreen
@@ -13,10 +15,13 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class PlantActivity : AppCompatActivity() {
+// i want winCheck to enable a crown @ the start of the game on the main menu
+    //if u get = true u get a crown
+    var winCheck = false;
 
 
     @SuppressLint("SetTextI18n")
-    val winButton = findViewById<Button>(R.id.winButton)
+//    val winButton = findViewById<Button>(R.id.winButton)
 //    @SuppressLint("ResourceType")
 //    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
 //    @SuppressLint("ResourceType")
@@ -39,19 +44,32 @@ class PlantActivity : AppCompatActivity() {
         @SuppressLint("ResourceType")
         var grabaTorch =  findViewById<Button>(R.integer.grabaTorch)
         @SuppressLint("ResourceType")
-        var torchMancy: Int = findViewById<Button>(R.integer.torchMancy)
+        var torchMancy: Button? = findViewById<Button>(R.integer.torchMancy)
         // importing the two variables for the winCheck
 
         winButton.setOnClickListener{
-            fun main = if(grabaTorch > 0) {
-                ( torchMancy > 0 )
-                    else{
+            fun main if (grabaTorch > 0) {
+            val intent = Intent(this, MainActivity::class.java)
+            //we go to a new activity too
+            startActivity(intent)
 
-                }
-            }
+            var winCheck = true;
+        else {
+                //on Else send back to mainstream w a toast "u lost..."
+                val intent =
+                    android.content.Intent(this, com.ankit.cavegame.MainActivity::class.java)
+                Toast.makeText(this@PlantActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
+
+
+                startActivity(intent)
+
+
+
+
+        }
             }
 
-            val intent = Intent(this, WizActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             //we go to a new activity too
             startActivity(intent)
 
