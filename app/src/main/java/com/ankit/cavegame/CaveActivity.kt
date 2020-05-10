@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 //not very fun but 'gameplay' comes later :p
 
 class CaveActivity : AppCompatActivity() {
-    var grabaTorch: Int = 0
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +27,7 @@ class CaveActivity : AppCompatActivity() {
         val button1: Button = findViewById<Button>(R.id.button1);
         val button2 = findViewById<Button>(R.id.button2);
         val button3 = findViewById<Button>(R.id.button3);
-//        val button4 = findViewById<Button>(R.id.button4);
+        val button4 = findViewById<Button>(R.id.button4);
 // p sure button 4 is in use @ bottom but i gotta coment out to get stuff to work
 //TODO Make button 4 take u to next activity so player can fail
 
@@ -39,27 +38,20 @@ class CaveActivity : AppCompatActivity() {
 
         //del 40 if stuff doesnt work i just added
         button1.setOnClickListener() {
-            data class Counter(val grabaTorch: Int) {
-                operator fun plus(increment: Int): Counter {
-                    return Counter(grabaTorch + increment)
-
-
-                }
-            }
-
+            Toast.makeText(this@CaveActivity, "You grabbed a torch!", Toast.LENGTH_SHORT).show()
+            MyApplication.Companion.grabaTorch = true;
         }
 
 //        to avoid unfun crashes. (As opposed to fun crashes)
-            button3.setOnClickListener {
-            Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
+        button3.setOnClickListener {
+        Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
 
-            button2.setOnClickListener {
-            Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()       }
+        button2.setOnClickListener {
+        Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()       }
 
 //        to go to wiz, and skip.  btm right button
-        val button = findViewById<Button>(R.id.button4)
-        button.setOnClickListener {
-            Toast.makeText(this@CaveActivity, "You Grab a Torch!", Toast.LENGTH_SHORT).show()
+        button4.setOnClickListener {
+            Toast.makeText(this@CaveActivity, "Go to the light!", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, WizActivity::class.java)
             startActivity(intent)
         }

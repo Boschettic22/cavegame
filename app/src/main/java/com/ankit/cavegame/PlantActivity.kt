@@ -29,55 +29,29 @@ class PlantActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var winCheck: Boolean = false;
+//        var winCheck: Boolean = false;
         super.onCreate(savedInstanceState)
         setContentView(R.layout.plant_activity)
         // get reference to button
 
-//        var grabaTorch: Int = 0    <-- example
-//    @SuppressLint("ResourceType")
-//    var grabaTorch = findViewById<View>(R.layout.wiz_activity)
-//    @SuppressLint("ResourceType")
-//    var torchMancy = findViewById<View>(R.layout.cave_activity)
-
-//        comented out @ 10:30
-        @SuppressLint("ResourceType")
-        var grabaTorch =  findViewById<Button>(R.integer.grabaTorch)
-        @SuppressLint("ResourceType")
-        var torchMancy: Button? = findViewById<Button>(R.integer.torchMancy)
         // importing the two variables for the winCheck
 
         winButton.setOnClickListener{
-            fun main if (grabaTorch > 0) {
-            val intent = Intent(this, MainActivity::class.java)
-            //we go to a new activity too
-            startActivity(intent)
-
-            var winCheck = true;
-        else {
-                //on Else send back to mainstream w a toast "u lost..."
-                val intent =
-                    android.content.Intent(this, com.ankit.cavegame.MainActivity::class.java)
-                Toast.makeText(this@PlantActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
-
-
+            if (MyApplication.Companion.grabaTorch && MyApplication.Companion.torchMancy) {
+                val intent = Intent(this, WinnerActivity::class.java)
+                var winCheck = true; // this is only a local variable in this listener...as soon as the listener completes, it disappears
                 startActivity(intent)
-
-
-
-
-        }
+            }
+            else {
+                //on Else send back to mainstream w a toast "u lost..."
+                val intent = Intent(this, MainActivity::class.java)
+                Toast.makeText(this@PlantActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
             }
 
-            val intent = Intent(this, MainActivity::class.java)
-            //we go to a new activity too
-            startActivity(intent)
-
-            var winCheck = true;
-            setContentView(R.layout.winner_activity)
         }
 
-        }
+    }
 
         //TODO Make button reset game if u fail
         //button should send u to main screen if u fail
