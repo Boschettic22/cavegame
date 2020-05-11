@@ -15,7 +15,7 @@
         android:background="@color/caveColor"
         android:orientation="vertical"
 
-        tools:context=".CaveActivity">
+        tools:context=".activity.CaveActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

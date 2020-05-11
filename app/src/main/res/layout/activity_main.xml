@@ -5,29 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/titleColor"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <ImageButton
         android:id="@+id/portalStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="369dp"
+        android:layout_height="691dp"
+        android:layout_marginTop="16dp"
         android:scaleType="fitXY"
         android:text="@string/title2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/titleidea"
         tools:layout_editor_absoluteZ="1" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/title2"-->
-<!--        tools:layout_editor_absoluteX="129dp"-->
-<!--        tools:layout_editor_absoluteY="696dp"-->
-<!--        tools:layout_editor_absoluteZ="1" />-->
+    <ImageView
+        android:id="@+id/crownPicc"
+        android:layout_width="116dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="275dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/crownpic"
+        android:visibility="invisible"/>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/title2"-->
+    <!--        tools:layout_editor_absoluteX="129dp"-->
+    <!--        tools:layout_editor_absoluteY="696dp"-->
+    <!--        tools:layout_editor_absoluteZ="1" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

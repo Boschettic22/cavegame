@@ -1,4 +1,4 @@
-package com.ankit.cavegame
+package com.ankit.cavegame.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ankit.cavegame.MyApplication
+import com.ankit.cavegame.R
 
 //i want this code to put away some text when one of the buttons is pressed, and
 //if the user chooses correctly, gives them a torch,
@@ -24,7 +26,7 @@ class CaveActivity : AppCompatActivity() {
         setContentView(R.layout.cave_activity)
 
 //        val textView = findViewById<TextView>(R.id.dungeontext)
-        val button1: Button = findViewById<Button>(R.id.button1);
+        val button1 = findViewById<Button>(R.id.button1);
         val button2 = findViewById<Button>(R.id.button2);
         val button3 = findViewById<Button>(R.id.button3);
         val button4 = findViewById<Button>(R.id.button4);
@@ -39,15 +41,15 @@ class CaveActivity : AppCompatActivity() {
         //del 40 if stuff doesnt work i just added
         button1.setOnClickListener() {
             Toast.makeText(this@CaveActivity, "You grabbed a torch!", Toast.LENGTH_SHORT).show()
-            MyApplication.Companion.grabaTorch = true;
+            MyApplication.grabaTorch = true;
         }
+
+        button2.setOnClickListener {
+            Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()       }
 
 //        to avoid unfun crashes. (As opposed to fun crashes)
         button3.setOnClickListener {
         Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()      }
-
-        button2.setOnClickListener {
-        Toast.makeText(this@CaveActivity, "You Probably Died...", Toast.LENGTH_SHORT).show()       }
 
 //        to go to wiz, and skip.  btm right button
         button4.setOnClickListener {

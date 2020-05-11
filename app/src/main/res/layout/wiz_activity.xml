@@ -9,7 +9,7 @@
         android:background="@color/wizColor"
         android:orientation="vertical"
 
-        tools:context=".WizActivity">
+        tools:context=".activity.WizActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

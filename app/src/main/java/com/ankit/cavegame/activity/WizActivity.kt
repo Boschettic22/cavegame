@@ -1,12 +1,12 @@
-package com.ankit.cavegame
+package com.ankit.cavegame.activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ankit.cavegame.MyApplication
+import com.ankit.cavegame.R
 import kotlinx.android.synthetic.main.wiz_activity.*
 
 
